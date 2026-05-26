@@ -130,6 +130,7 @@ export function ContactSection() {
                   type="submit"
                   label={status === 'sending' ? 'Sending...' : 'Send Message'}
                   disabled={status === 'sending' || !isReady}
+                  className="w-full justify-center sm:w-auto"
                 />
                 {status === 'success' && (
                   <p className="text-sm uppercase tracking-[0.3em] text-[#D7E2EA]/70">

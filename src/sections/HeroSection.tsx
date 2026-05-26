@@ -13,13 +13,13 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex h-screen flex-col overflow-x-clip"
+      className="relative flex min-h-[100svh] flex-col overflow-x-clip"
     >
       <FadeIn
         as="nav"
         delay={0}
         y={-20}
-        className="flex items-center justify-between px-6 pt-6 text-sm font-medium uppercase tracking-wider text-[#D7E2EA] md:px-10 md:pt-8 md:text-lg lg:text-[1.4rem]"
+        className="flex flex-wrap items-center justify-center gap-4 px-6 pt-6 text-[0.7rem] font-medium uppercase tracking-wider text-[#D7E2EA] sm:gap-6 sm:text-sm md:flex-nowrap md:justify-between md:px-10 md:pt-8 md:text-lg lg:text-[1.4rem]"
       >
         {NAV_LINKS.map((link) => (
           <a
@@ -45,8 +45,8 @@ export function HeroSection() {
           </h1>
         </FadeIn>
 
-        <div className="relative z-20 flex items-end justify-between px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
-          <FadeIn delay={0.35} y={20} className="max-w-[220px] sm:max-w-[280px] md:max-w-[320px]">
+        <div className="relative z-20 flex flex-col items-start justify-between gap-6 px-6 pb-7 sm:pb-8 md:flex-row md:items-end md:gap-10 md:px-10 md:pb-10">
+          <FadeIn delay={0.35} y={20} className="max-w-[260px] sm:max-w-[320px] md:max-w-[340px]">
             <p className="text-[clamp(0.85rem,1.3vw,1.35rem)] font-medium leading-relaxed text-[#D7E2EA]/90">
               Full-stack developer building responsive React frontends and scalable Node/Express APIs.
             </p>
@@ -61,7 +61,7 @@ export function HeroSection() {
         as="div"
         delay={0.6}
         y={30}
-        className="absolute left-1/2 top-1/2 z-10 w-[280px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:translate-y-0 sm:w-[360px] md:w-[440px] lg:w-[520px]"
+        className="absolute left-1/2 top-[52%] z-10 w-[220px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:translate-y-0 sm:w-[360px] md:w-[440px] lg:w-[520px]"
       >
         <Magnet
           padding={150}

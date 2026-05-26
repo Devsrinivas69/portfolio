@@ -51,7 +51,7 @@ export function ServicesSection() {
             className="border-t border-[#0C0C0C]/15 py-8 sm:py-10 md:py-12 last:border-b"
           >
             <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-10">
-              <div className="text-[clamp(3rem,10vw,140px)] font-black text-[#0C0C0C]">
+              <div className="text-[clamp(2.4rem,14vw,5.5rem)] font-black text-[#0C0C0C] md:text-[clamp(3rem,10vw,140px)]">
                 {service.number}
               </div>
               <div className="flex flex-col gap-3">

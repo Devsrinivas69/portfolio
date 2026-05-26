@@ -57,7 +57,7 @@ export function AboutSection() {
         duration={0.9}
         x={-80}
         y={0}
-        className="absolute bottom-[8%] left-[3%] w-[100px] sm:left-[6%] sm:w-[140px] md:left-[10%] md:w-[180px]"
+        className="absolute bottom-[8%] left-[3%] hidden w-[100px] sm:block sm:left-[6%] sm:w-[140px] md:left-[10%] md:w-[180px]"
       />
       <FadeIn
         as="img"
@@ -77,7 +77,7 @@ export function AboutSection() {
         duration={0.9}
         x={80}
         y={0}
-        className="absolute bottom-[8%] right-[3%] w-[130px] sm:right-[6%] sm:w-[170px] md:right-[10%] md:w-[220px]"
+        className="absolute bottom-[8%] right-[3%] hidden w-[130px] sm:block sm:right-[6%] sm:w-[170px] md:right-[10%] md:w-[220px]"
       />
 
       <div className="relative z-10 flex flex-col items-center gap-10 text-center sm:gap-14 md:gap-16">
@@ -99,7 +99,7 @@ export function AboutSection() {
                 href={href}
                 target={href.startsWith('http') ? '_blank' : undefined}
                 rel={href.startsWith('http') ? 'noreferrer' : undefined}
-                className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-[clamp(0.8rem,1.1vw,1rem)] uppercase tracking-[0.2em] text-[#D7E2EA]/80 transition-all hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
+                className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-[0.78rem] uppercase tracking-[0.12em] text-[#D7E2EA]/80 transition-all hover:-translate-y-1 hover:border-white/30 hover:bg-white/10 sm:text-[clamp(0.8rem,1.1vw,1rem)] sm:tracking-[0.2em]"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#0C0C0C] text-[#D7E2EA] shadow-[0_0_20px_rgba(215,226,234,0.15)]">
                   <Icon className="h-5 w-5" aria-hidden="true" />

@@ -59,11 +59,11 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale])
 
   return (
-    <div className="h-[85vh] w-full">
+    <div className="w-full md:h-[85vh]">
       <motion.div
         ref={cardRef}
         style={{ scale, top: `${index * 28}px` }}
-        className="sticky top-24 rounded-[40px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:rounded-[50px] sm:p-6 md:top-32 md:rounded-[60px] md:p-8"
+        className="rounded-[32px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:rounded-[40px] sm:p-6 md:sticky md:top-32 md:rounded-[60px] md:p-8"
       >
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
@@ -90,7 +90,7 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
         </div>
 
         <div className="mt-6 grid gap-4 md:grid-cols-3 md:gap-6">
-          <div className="rounded-[28px] border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6">
+          <div className="rounded-[24px] border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-4 sm:rounded-[28px] sm:p-6">
             <p className="text-xs uppercase tracking-[0.3em] text-[#D7E2EA]/60">
               Problem
             </p>
@@ -98,7 +98,7 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
               {project.problem}
             </p>
           </div>
-          <div className="rounded-[28px] border border-white/10 bg-[#111111] p-6">
+          <div className="rounded-[24px] border border-white/10 bg-[#111111] p-4 sm:rounded-[28px] sm:p-6">
             <p className="text-xs uppercase tracking-[0.3em] text-[#D7E2EA]/60">
               Solution
             </p>
@@ -106,7 +106,7 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
               {project.solution}
             </p>
           </div>
-          <div className="rounded-[28px] border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-white/10 p-6">
+          <div className="rounded-[24px] border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-white/10 p-4 sm:rounded-[28px] sm:p-6">
             <p className="text-xs uppercase tracking-[0.3em] text-[#D7E2EA]/60">
               Impact
             </p>
@@ -115,7 +115,7 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
             </p>
           </div>
         </div>
-        <div className="mt-6 rounded-[28px] border border-white/10 bg-[#101010] p-6">
+        <div className="mt-6 rounded-[24px] border border-white/10 bg-[#101010] p-4 sm:rounded-[28px] sm:p-6">
           <p className="text-sm uppercase tracking-[0.3em] text-[#D7E2EA]/60">
             Focus areas
           </p>

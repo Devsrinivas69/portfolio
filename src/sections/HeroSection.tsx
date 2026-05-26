@@ -13,7 +13,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100svh] flex-col overflow-x-clip"
+      className="relative flex min-h-[100svh] flex-col"
     >
       <FadeIn
         as="nav"
@@ -32,12 +32,13 @@ export function HeroSection() {
         ))}
       </FadeIn>
 
-      <div className="relative flex flex-1 flex-col justify-between">
+      <div className="flex flex-1 items-center px-6 pb-10 pt-6 sm:pt-8 md:px-10">
+        <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[1.1fr_0.9fr] md:gap-10">
         <FadeIn
           as="div"
           delay={0.15}
           y={40}
-          className="relative z-20 mt-6 overflow-hidden px-6 sm:mt-4 md:-mt-5 md:px-10"
+          className="relative z-20 overflow-hidden md:col-start-1 md:row-start-1"
         >
           <h1 className="hero-heading w-full text-[13.5vw] font-black uppercase leading-[0.9] tracking-tight sm:text-[12vw] md:text-[10.5vw] lg:text-[9.5vw]">
             <span className="block">Srinivas</span>
@@ -45,8 +46,30 @@ export function HeroSection() {
           </h1>
         </FadeIn>
 
-        <div className="relative z-20 flex flex-col items-start justify-between gap-6 px-6 pb-7 sm:pb-8 md:flex-row md:items-end md:gap-10 md:px-10 md:pb-10">
-          <FadeIn delay={0.35} y={20} className="max-w-[260px] sm:max-w-[320px] md:max-w-[340px]">
+        <FadeIn
+          as="div"
+          delay={0.6}
+          y={30}
+          className="flex justify-center md:col-start-2 md:row-span-2 md:justify-end"
+        >
+          <Magnet
+            padding={150}
+            strength={3}
+            activeTransition="transform 0.3s ease-out"
+            inactiveTransition="transform 0.6s ease-in-out"
+            className="w-full max-w-[220px] sm:max-w-[240px] md:max-w-[360px] lg:max-w-[420px]"
+          >
+            <img
+              src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
+              alt="3D creator portrait"
+              className="h-auto w-full object-contain"
+              loading="lazy"
+            />
+          </Magnet>
+        </FadeIn>
+
+        <div className="relative z-20 flex flex-col items-start gap-6 md:col-start-1 md:row-start-2 md:max-w-[340px]">
+          <FadeIn delay={0.35} y={20}>
             <p className="text-[clamp(0.85rem,1.3vw,1.35rem)] font-medium leading-relaxed text-[#D7E2EA]/90">
               Full-stack developer building responsive React frontends and scalable Node/Express APIs.
             </p>
@@ -55,28 +78,8 @@ export function HeroSection() {
             <ContactButton href="#contact" />
           </FadeIn>
         </div>
+        </div>
       </div>
-
-      <FadeIn
-        as="div"
-        delay={0.6}
-        y={30}
-        className="absolute left-1/2 top-[55%] z-10 w-[220px] -translate-x-1/2 -translate-y-1/2 max-sm:top-1/2 max-sm:w-[170px] sm:w-[260px] md:w-[330px] lg:w-[400px]"
-      >
-        <Magnet
-          padding={150}
-          strength={3}
-          activeTransition="transform 0.3s ease-out"
-          inactiveTransition="transform 0.6s ease-in-out"
-        >
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-            alt="3D creator portrait"
-            className="w-full"
-            loading="lazy"
-          />
-        </Magnet>
-      </FadeIn>
     </section>
   )
 }

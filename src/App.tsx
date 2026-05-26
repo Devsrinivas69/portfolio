@@ -7,7 +7,7 @@ import { ServicesSection } from './sections/ServicesSection'
 
 function App() {
   return (
-    <main className="bg-[#0C0C0C] text-[#D7E2EA] overflow-x-clip">
+    <main className="bg-[#0C0C0C] text-[#D7E2EA]">
       <HeroSection />
       <AboutSection />
       <ServicesSection />

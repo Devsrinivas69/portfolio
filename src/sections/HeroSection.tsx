@@ -61,7 +61,7 @@ export function HeroSection() {
         as="div"
         delay={0.6}
         y={30}
-        className="absolute left-1/2 top-[52%] z-10 w-[220px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:translate-y-0 sm:w-[360px] md:w-[440px] lg:w-[520px]"
+        className="absolute left-1/2 top-1/2 z-10 w-[280px] -translate-x-1/2 -translate-y-1/2 max-sm:top-[46%] max-sm:w-[240px] sm:bottom-0 sm:top-auto sm:translate-y-0 sm:w-[360px] md:w-[440px] lg:w-[520px]"
       >
         <Magnet
           padding={150}

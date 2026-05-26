@@ -4,7 +4,14 @@ import { ContactButton } from '../components/ContactButton'
 import { FadeIn } from '../components/FadeIn'
 
 const ABOUT_TEXT =
-  'Motivated BCA graduate and full-stack developer with real-world experience building responsive React frontends and scalable Node.js/Express.js APIs. I ship production-ready web applications, collaborate with clients on UI and UX, and mentor junior developers. Seeking a Full Stack Developer internship at Adsquaretech to contribute to real projects and grow through mentorship.'
+  'Motivated BCA graduate and full-stack developer focused on building responsive React frontends and scalable Node.js/Express.js APIs. I deliver production-ready web apps, collaborate closely on UI/UX, and bring a practical, on-time delivery mindset. Open to a Full Stack Developer internship where I can contribute to real projects and grow through mentorship.'
+
+const STATS = [
+  { label: 'Live Projects', value: '2+' },
+  { label: 'Core Flows Shipped', value: '3' },
+  { label: 'Client Iterations', value: '10+' },
+  { label: 'Response Time', value: '24h' },
+]
 
 const CONTACTS = [
   {
@@ -90,8 +97,23 @@ export function AboutSection() {
         <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
           <AnimatedText
             text={ABOUT_TEXT}
-            className="max-w-[560px] text-center text-[clamp(1rem,2vw,1.35rem)] font-medium leading-relaxed text-[#D7E2EA]"
+            className="max-w-[560px] text-center text-[clamp(1rem,2vw,1.35rem)] font-medium leading-relaxed text-pretty text-[#D7E2EA]"
           />
+          <div className="grid w-full max-w-[560px] grid-cols-2 gap-3 text-left sm:grid-cols-4">
+            {STATS.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+              >
+                <p className="text-[1.1rem] font-semibold text-[#D7E2EA]">
+                  {stat.value}
+                </p>
+                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-[#D7E2EA]/60">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
           <div className="grid gap-3 text-left sm:grid-cols-2">
             {CONTACTS.map(({ label, value, href, Icon }) => (
               <a

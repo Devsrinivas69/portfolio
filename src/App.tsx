@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { AboutSection } from './sections/AboutSection'
 import { ContactSection } from './sections/ContactSection'
 import { HeroSection } from './sections/HeroSection'
@@ -14,6 +15,7 @@ function App() {
       <ProcessSection />
       <ProjectsSection />
       <ContactSection />
+      <Analytics />
     </main>
   )
 }

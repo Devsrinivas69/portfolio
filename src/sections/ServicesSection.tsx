@@ -29,7 +29,7 @@ const SERVICES = [
     number: '05',
     title: 'Collaboration',
     description:
-      'Mentoring junior developers, clear technical communication, and problem solving in teams.',
+      'Mentoring junior developers, clear technical communication, Slack collaboration, and problem solving in teams.',
   },
 ]
 

@@ -41,6 +41,23 @@ const PROJECTS = [
       'End-to-end deployment with Express backend',
     ],
   },
+  {
+    number: '03',
+    category: 'Personal',
+    name: 'F1 COMMANDER',
+    stack: 'React.js, JavaScript, Vercel',
+    liveUrl: 'https://2026-f1.vercel.app',
+    problem:
+      'Need for an interactive, quick-access racing dashboard and strategy preview for fans and small teams.',
+    solution:
+      'Built a responsive single‑page demo that visualizes race data and strategy options using React.',
+    impact: 'Live prototype available for demos and feedback.',
+    highlights: [
+      'Responsive telemetry-style UI and controls',
+      'Lightweight client-side performance optimizations',
+      'Deployed to Vercel for instant sharing',
+    ],
+  },
 ]
 
 type ProjectCardProps = {

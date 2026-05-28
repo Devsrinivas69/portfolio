@@ -45,6 +45,7 @@ const PROJECTS = [
     number: '03',
     category: 'Personal',
     name: 'F1 COMMANDER',
+    recent: true,
     stack: 'React.js, JavaScript, Vercel',
     liveUrl: 'https://2026-f1.vercel.app',
     problem:
@@ -91,9 +92,16 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
               <span className="text-xs uppercase tracking-[0.3em] text-[#D7E2EA]/70 sm:text-sm">
                 {project.category}
               </span>
-              <h3 className="text-[clamp(1.3rem,3vw,2.8rem)] font-semibold uppercase text-[#D7E2EA]">
-                {project.name}
-              </h3>
+              <div className="flex items-center gap-3">
+                <h3 className="text-[clamp(1.3rem,3vw,2.8rem)] font-semibold uppercase text-[#D7E2EA]">
+                  {project.name}
+                </h3>
+                {project.recent && (
+                  <span className="rounded-full bg-[#D7E2EA]/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-[#D7E2EA]">
+                    Recent
+                  </span>
+                )}
+              </div>
               {project.stack && (
                 <p className="text-[clamp(0.7rem,1.1vw,0.95rem)] font-light uppercase tracking-[0.2em] text-[#D7E2EA]/60">
                   {project.stack}
